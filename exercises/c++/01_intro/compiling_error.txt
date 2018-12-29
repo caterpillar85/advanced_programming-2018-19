@@ -1,0 +1,13 @@
+/home/daniele/Desktop/UniTS_DataScience/02_Advance Programming/advanced_programming-2018-19/exercises/c++/01_intro/unit-measure.cpp: In function ‘int main()’:
+/home/daniele/Desktop/UniTS_DataScience/02_Advance Programming/advanced_programming-2018-19/exercises/c++/01_intro/unit-measure.cpp:38:16: error: too few arguments to function ‘double inch_meter(double)’
+     inch_meter();
+                ^
+/home/daniele/Desktop/UniTS_DataScience/02_Advance Programming/advanced_programming-2018-19/exercises/c++/01_intro/unit-measure.cpp:11:8: note: declared here
+ double inch_meter(double input)
+        ^~~~~~~~~~
+/home/daniele/Desktop/UniTS_DataScience/02_Advance Programming/advanced_programming-2018-19/exercises/c++/01_intro/unit-measure.cpp:40:16: error: too few arguments to function ‘double meter_inch(double)’
+     meter_inch();
+                ^
+/home/daniele/Desktop/UniTS_DataScience/02_Advance Programming/advanced_programming-2018-19/exercises/c++/01_intro/unit-measure.cpp:19:8: note: declared here
+ double meter_inch(double input)
+        ^~~~~~~~~~
