@@ -8,10 +8,11 @@
 
 #include <iostream>
 
+
 double inch_meter(double input)
 {
 
-  double output=input*0.254;
+  double output = input*0.254;
   std::cout << input << " inches corresponds to " << output << " meters" <<'\n';
 return output;
 }
@@ -19,7 +20,7 @@ return output;
 double meter_inch(double input)
 {
 
-  double output=input*39.3701;
+  double output = input*39.3701;
   std::cout << input << " meters corresponds to " << output << " inches" << '\n';
 return output;
 }
@@ -27,17 +28,17 @@ return output;
 
 int main() {
 
-double input=0.0;
-std::string measure="";
-std::string inches="";
+double input = 0.0;
+std::string measure = "";
+std::string inches = "";
 
   std::cout << "please, insert a value followed by a unit of measure, inches or meters" << '\n';
   std::cin >> input >> measure;
 
 if (measure == inches) {
-    inch_meter();
+    inch_meter(input);
   } else {
-    meter_inch();
+    meter_inch(input);
   }
 
 return 0;
