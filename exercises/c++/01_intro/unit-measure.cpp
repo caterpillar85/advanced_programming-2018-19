@@ -40,6 +40,6 @@ if (measure == inches) {
   } else {
     meter_inch(input);
   }
-1
+
 return 0;
     }
