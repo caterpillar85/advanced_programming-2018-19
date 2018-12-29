@@ -21,7 +21,7 @@ usando solo addizioni n volte*/
 int print_square(int input)
 {
   int x1 = 0;
-  for (int i = input; i > 0; i--) {
+  for (int i = 0; i < input; i++) {
       x1 += input;
   }
   return x1;
