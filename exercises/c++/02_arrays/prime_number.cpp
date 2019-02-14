@@ -28,15 +28,19 @@ void print_array_primes(Type* d_array, int size)
 // aggiungo elementi all'array facendo il check
   int number = 0;
   int* primes = array_template<int>(size);
-  for (int i = 2; i < size; i++) {
+  for (int i = 2; i < size; i++)
+  {
     bool marker = true;
-    for (int j = 2; j < i; j++) {
-      if (i % j == 0) {
+    for (int j = 2; j < i; j++)
+    {
+      if (i % j == 0)
+      {
         marker = false;
         break;
       }
     }
-  if (marker) {
+  if (marker)
+  {
     primes[number++] = i;
     std::cout << "primes[" << i << "]" << " is prime number" << std::endl;
     }
