@@ -27,13 +27,13 @@ template <typename Type>
 void print_array_eratosthenes(Type* d_array, int size)
 {
   bool* primes = array_template<bool>(size); //crea un array restituendo il pointer al primo elemento
-  std::fill(primes + 2, primes + size, true); //popola l'array con tutti "true"
+  std::fill(primes + 1, primes + size, true); //popola l'array con tutti "true"
 
   for (int i = 2; i <= std::sqrt(size); i++)
   {
     if (primes[i - 1])
     {
-      for (int j = i*i; j <= size; j++)
+      for (int j = (i*i); j <= size; j+=i)
       {
         primes[j - 1] = false;
       }
@@ -42,7 +42,7 @@ void print_array_eratosthenes(Type* d_array, int size)
 
   for (int i = 1; i <= size; i++)
   {
-    if (primes[i])
+    if (primes[i - 1])
     {
       std::cout << "primes[" << i << "]" << " is prime number" << std::endl;
     }
@@ -57,8 +57,8 @@ int main()
   std::cin >> size;
 
     // scrivo l'array richiamando il template
-    bool* primes = array_template<bool>(size);
-    print_array_eratosthenes(primes, size);
+    bool* eratosthenes = array_template<bool>(size);
+    print_array_eratosthenes(eratosthenes, size);
 
   return 0;
 }
