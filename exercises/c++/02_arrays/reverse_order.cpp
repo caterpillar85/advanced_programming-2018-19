@@ -28,9 +28,9 @@ template <typename Type>
 void print_array_reverse(Type* d_array, int size)
 {
       for(int i = size - 1; i >= 0; i--)
-    {
+        {
         std::cout << "array[" << i << "] = " << d_array[i] << std::endl;
-    }
+        }
     delete[] d_array;
 }
 
