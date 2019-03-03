@@ -11,6 +11,24 @@
 #include <iostream>
 #include <vector>
 
+// Funzione per invertire gli elementi di un vettore
+void print_vector_reverse(int size)
+{
+  // crea un vettore di tipo type con dimensione n e lo inizializzo
+  std::vector<int> v(size);
+  for (int i = 0; i < size; ++i)
+  {
+    std::cout << "Enter the element number " << i + 1 << " of the vector" << std::endl;
+    std::cin >> v[i];
+    v.push_back(i);
+  }
+  // inverto l'ordine
+      for(int i = size - 1; i >= 0; i--)
+        {
+        std::cout << "vector[" << i << "] = " << v[i] << std::endl;
+        }
+}
+
 int main()
 {
   std::cout << "This code allows to reverse a given vector" << std::endl;
@@ -18,18 +36,8 @@ int main()
   int size;
   std::cin >> size;
 
-    // scrivo l'array usando un vector di tipo int
-    // crea un vettore di tipo type con dimensione n e lo inizializza ai valori costanti t
-    std::vector <int> vec(size);
-    for (int i = 0; i < size; ++i)
-    {
-      std::cout << "Enter the element number " << i + 1 << " of the vector" << std::endl;
-      std::cin >> vec[i];
-    }
+    // scrivo il vettore inverso richiamando la funzione
+    print_vector_reverse(size);
 
-    for(int i = size - 1; i >= 0; i--)
-    {
-      std::cout << "vector[" << i << "] = " << vec[i] << std::endl;
-    }
   return 0;
   }
