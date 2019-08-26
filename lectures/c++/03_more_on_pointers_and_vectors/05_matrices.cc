@@ -8,6 +8,7 @@ void print_ma(int m[][5], int dim1);  // ugly and not flexible
 
 void print_ma(int* p, int row, int col);  // the only possible solution
 
+//Funzione per generare e plottare la matrice
 int main() {
   int ma[6][5];  // matrix: 6 rows, 5 columns each
 
@@ -15,12 +16,15 @@ int main() {
     for (int j = 0; j < 5; ++j)
       ma[i][j] = 10 * i + j;
 
+//Plotta la matrice, elemento per elemento
   for (int i = 0; i < 6; ++i) {
     for (int j = 0; j < 5; ++j)
       std::cout << std::setw(3) << ma[i][j];
     std::cout << std::endl;
   }
 
+//siamo all'interno del "Void"
+//ciclo per plottare gli indirizzi degli elementi della matrice
   for (int i = 0; i < 6; ++i) {
     for (int j = 0; j < 5; ++j)
       std::cout << &ma[i][j] << " ";
@@ -29,10 +33,12 @@ int main() {
 
   // int *pma = ma; 		// error
   // int *pma[5] = ma;		// error
+
+  //assegna a "p" il valore della reference dell'elemento [0,0] della matrice
   int* p = &ma[0][0];
 
   // print_ma(ma, 6, 5); 	// error
-  print_ma(p, 6, 5);
+  print_ma(p, 6, 5); 
 
   int* d_ma = new int[6 * 5]{};
 
