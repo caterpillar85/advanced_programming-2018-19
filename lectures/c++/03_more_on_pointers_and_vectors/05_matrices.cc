@@ -1,7 +1,7 @@
 #include <iomanip>
 #include <iostream>
 
-void print_ma(int m[][5], int dim1);  // ugly and not flexible
+// void print_ma(int m[][5], int dim1);  // ugly and not flexible
 // void print_ma(int m[][], int dim1, int dim2); // error second
 // dimension must be
 // knwon at compile time
@@ -38,7 +38,7 @@ int main() {
   int* p = &ma[0][0];
 
   // print_ma(ma, 6, 5); 	// error
-  print_ma(p, 6, 5); 
+  print_ma(p, 6, 5);
 
   int* d_ma = new int[6 * 5]{};
 
